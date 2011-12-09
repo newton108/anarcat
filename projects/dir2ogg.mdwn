@@ -38,15 +38,15 @@ Users running other distributions may need to manually install it:
 
 ## Dependencies
 [[!table format=dsv data="""
-Format|Recommended|Alternatives|
-APE (Monkey's Audio)|mac|mplayer|
-MP3|mpg321|mpg123,lame,mplayer|
-MP4/M4A/AAC|faad|alac-decoder (for ALAC files), mplayer|
-FLAC|flac|ogg123 (included in vorbis-tools), mplayer|
-MPC (Musepack)|mpcdec|mplayer|
-WMA/ASF|mplayer||
-WV (WavPack)|wvunpack|mplayer|
-Audio-CD|cdparanoia|icedax, cdda2wav, mplayer|
+Format|Recommended|Alternatives
+APE (Monkey's Audio)|mac|mplayer
+MP3|mpg321|mpg123,lame,mplayer
+MP4/M4A/AAC|faad|alac-decoder (for ALAC files), mplayer
+FLAC|flac|ogg123 (included in vorbis-tools), mplayer
+MPC (Musepack)|mpcdec|mplayer
+WMA/ASF|mplayer|
+WV (WavPack)|wvunpack|mplayer
+Audio-CD|cdparanoia|icedax, cdda2wav, mplayer
 """]]
 # Usage
 These are some examples. For more information, read the [[manpage|usage]]
