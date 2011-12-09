@@ -1,0 +1,72 @@
+# dir2ogg - audio conversion tool
+dir2ogg is a GPL'ed python script which converts mp3, m4a, wma, and wav files into ogg-vorbis format. It was inspired by
+the perl script [mp32ogg](http://faceprint.com/code/)
+
+[[!table format=dsv data="""
+Status|License|Language|Launchpad|VCS|Latest release
+Maintenance|GPL-2+|Python|[dir2ogg](https://launchpad.net/dir2ogg)|[Bazaar@LP](https://code.launchpad.net/~juliank/dir2ogg/main)|[[0.11/dir2ogg-0.11.8.tar.gz]]
+"""]]
+
+# How you can help
+ * Use the software (using OSX/FreeBSD/other unixes? write a mail)
+ * [report bugs](https://bugs.launchpad.net/dir2ogg/) you find
+ * Try [[development_versions|dir2ogg/devel]]
+ * Tell others about it
+ * package it for your distribution / your operating system
+
+# Downloads
+The current stable release is [[0.11.8|0.11/dir2ogg-0.11.8.tar.gz]] ([[NEWS]]). It is recommended
+that you install and use this version.
+
+## Browse
+You may browse the current releases: [[0.10]], [[0.11]]
+
+# Installation
+Users running [Debian](http://packages.debian.org/dir2ogg) (including Debian GNU/kFreeBSD),
+[Gentoo](http://packages.gentoo.org/package/media-sound/dir2ogg) or
+[Ubuntu](http://packages.ubuntu.com/dir2ogg) can install the
+software using their standard package managment solution.
+Ubuntu users need to enable the universe component.
+
+Users running other distributions may need to manually install it:
+
+<pre>
+# tar xzf dir2ogg-0.11.6.tar.gz
+# cd dir2ogg-0.11.6
+# sh install.sh # or simply run dir2ogg via ./dir2ogg
+</pre>
+
+## Dependencies
+[[!table format=dsv data="""
+Format|Recommended|Alternatives|
+APE (Monkey's Audio)|mac|mplayer|
+MP3|mpg321|mpg123,lame,mplayer|
+MP4/M4A/AAC|faad|alac-decoder (for ALAC files), mplayer|
+FLAC|flac|ogg123 (included in vorbis-tools), mplayer|
+MPC (Musepack)|mpcdec|mplayer|
+WMA/ASF|mplayer||
+WV (WavPack)|wvunpack|mplayer|
+Audio-CD|cdparanoia|icedax, cdda2wav, mplayer|
+"""]]
+# Usage
+These are some examples. For more information, read the [[manpage|usage]]
+
+## Convert files
+
+<pre>$ <b>dir2ogg foo.mp3</b> # <em>one file...</em>
+$ <b>dir2ogg -t foo.mp3</b> # <em>one file (keep quality, only for mp3)...</em>
+$ <b>dir2ogg foo.mp3 bar.m4a baz.wma qux.wav</b> # <em>multiple files...</em>
+</pre>
+
+## Converting directories
+<pre>$ <b>dir2ogg -d /path/to/mp3directory</b> # <em>single directory...</em>
+<pre>$ <b>dir2ogg /path/to/mp3directory</b> # <em>single directory..., same as previous one.</em>
+$ <b>dir2ogg -r /path/to/mp3directory</b> # <em>single directory (and subdirs)...</em>
+$ <b>dir2ogg -d /path/1/ /path/2 /path/3</b> # <em>multiple directories...</em>
+$ <b>dir2ogg -r /path/1/ /path/2 /path/3</b> # <em>recursive...</em></pre>
+## Converting Audio CDs
+<pre>$ <b>dir2ogg -c</b> # <em>convert cd in /dev/cdrom</em>
+$ <b>dir2ogg -c /dev/cdrom1</b> # <em>convert cd in /dev/cdrom1</em></pre>
+
+# Warning
+_"Converting from MP3 or M4A to OGG is a conversion between two lossy formats. This is fine if you just want to free up some disk space, but if you're a hard-core audiophile you may be disappointed. I really can't notice a difference in quality with 'naked' ears myself. You might want to do your conversion, then compare with the original before erasing them."_ - Darren Kirby, first dir2ogg developer

@@ -1,0 +1,59 @@
+# hardlink - replace file copies using hardlinks
+
+[[!table format=dsv data="""
+Status|License|Language|VCS|Downloads
+Stable|MIT|Python|[Git@Debian.org](http://git.debian.org/?p=users/jak/hardlink.git;a=summary)|0.1.1 ([tarball](hardlink_0.1.1.tar.gz),[debian package](hardlink_0.1.1_all.deb))
+"""]]
+
+
+hardlink is a tool which replaces multiple copies of a file with hardlinks.
+Inspiration came from <http://code.google.com/p/hardlinkpy/>, but no code has
+been used.
+
+I started from scratch because hardlinkpy lacks a consistent style and does
+not conform to PEP 8. Furthermore, it supports Python 1.5, which means no
+new functionality is used.
+
+My program requires at least Python 2.5, passes all known python checking
+tools (pylint,pychecker,pyflakes) without errors/warnings/information, and is
+compatible with Python 3.0 (after using 2to3).
+
+Downloads
+------------
+* [[hardlink_0.1.1.tar.gz]] - The tarball
+* [[hardlink_0.1.1_all.deb]] - official Debian package (requires Debian Lenny|Ubuntu Feisty)
+* [hardlink 0.1.1~bpo40+1 all.deb](hardlink_0.1.1~bpo40+1_all.deb) - unofficial Debian package (requires Debian 4.0)
+
+The tarball can be regenerated at any time by running "pristine-tar checkout
+hardlink_0.1.1.tar.gz" from inside a clone of the git repository.
+
+Installation
+------------
+To install hardlink into /usr, run make install.
+
+ * DESTDIR - May be set to another root system (useful for packaging)
+ * PREFIX  - Normally usr, may be changed to usr/local
+ * MANDIR  - Normally $(PREFIX)/share/man (some systems may use $(PREFIX)/man)
+ * BINDIR  - Normally $(PREFIX)/bin
+
+Differences to hardlinkpy
+-------------------------
+For users of hardlinkpy, several things are different. One of the most
+important changes is the renaming of all --foo-ignore arguments to
+--ignore-foo ones. This is more similar to the naming of options in GNU
+programs.
+
+* --timestamp-ignore has been renamed to --ignore-time
+* --owner-ignore has been renamed to --ignore-owner
+* --rights-ignore has been renamed to --ignore-mode
+* --filenames-equal has been renamed to --respect-name
+
+The option --reverse has been renamed to --minimize. The option --max has
+been renamed to --maximize.
+
+At the moment, output is different. This may change at a later point.
+
+Licensing
+---------
+hardlink is published under the terms of the MIT license. See the source code
+for more information. This file is subject to the same licensing terms.
