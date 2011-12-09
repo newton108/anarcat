@@ -1,41 +1,115 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <meta name="verify-v1" content="clvZ2JFji6TV1kJQPKdeBRamcUV9qG2b/hvK9xgZ/Zg=" />
-        <meta name="y_key" content="1009ba1bfc1a1e54" />
-        <title><TMPL_LOOP NAME="PARENTLINKS"><TMPL_VAR NAME=PAGE>/</TMPL_LOOP><TMPL_VAR TITLE></title>
-        <link rel="stylesheet" href="<TMPL_VAR BASEURL>style.css" type="text/css" />
-        <link rel="stylesheet" href="<TMPL_VAR BASEURL>local.css" type="text/css" />
-        <TMPL_IF NAME="META"><TMPL_VAR META></TMPL_IF>
-    </head>
-    <body>
-        <div id="header">
-            <div id="headertitle">JAK LINUX</div>
-            <div id="headersubtitle">Free Software Development</div>
-            <div style="clear: both"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Personal Website" />
+    <meta name="author" content="Julian Andres Klode" />
+
+    <meta name="verify-v1" content="clvZ2JFji6TV1kJQPKdeBRamcUV9qG2b/hvK9xgZ/Zg=" />
+    <meta name="y_key" content="1009ba1bfc1a1e54" />
+    <title><TMPL_LOOP NAME="PARENTLINKS"><TMPL_VAR NAME=PAGE>/</TMPL_LOOP><TMPL_VAR TITLE></title>
+
+    <TMPL_IF NAME="META"><TMPL_VAR META></TMPL_IF>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="<TMPL_VAR BASEURL>style.css" type="text/css" />
+    <link rel="stylesheet" href="<TMPL_VAR BASEURL>bootstrap.min.css" type="text/css" />
+    <style type="text/css">
+      /* Override some defaults */
+      html, body {
+        background-color: #eee;
+      }
+      body {
+        padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+      }
+      .container > footer p {
+        text-align: center; /* center align it with the container */
+      }
+      .container {
+        width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+      }
+
+      /* The white background content wrapper */
+      .container > .content {
+        background-color: #fff;
+        padding: 20px;
+        margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+        -webkit-border-radius: 0 0 6px 6px;
+           -moz-border-radius: 0 0 6px 6px;
+                border-radius: 0 0 6px 6px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+                box-shadow: 0 1px 2px rgba(0,0,0,.15);
+      }
+
+      /* Page header tweaks */
+      .page-header {
+        background-color: #f5f5f5;
+        padding: 20px 20px 10px;
+        margin: -20px -20px 20px;
+      }
+
+      /* Styles you shouldn't keep as they are for displaying this base example only */
+      .content .span10,
+      .content .span4 {
+        min-height: 500px;
+      }
+      /* Give a quick and non-cross-browser friendly divider */
+      .content .span4 {
+        margin-left: 0;
+        padding-left: 19px;
+        border-left: 1px solid #eee;
+      }
+
+      .topbar .btn {
+        border: 0;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="<TMPL_VAR BASEURL>">JAK LINUX</a>
+          <ul class="nav">
+            <li><a href="<TMPL_VAR BASEURL>projects/debimg/">debimg</a></li>
+            <li><a href="<TMPL_VAR BASEURL>projects/dir2ogg/">dir2ogg</a></li>
+            <li><a href="<TMPL_VAR BASEURL>projects/hardlink/">hardlink</a></li>
+            <li><a href="<TMPL_VAR BASEURL>projects/ndisgtk/">ndisgtk</a></li>
+          </ul>
+          <ul class="secondary-nav">
+            <li><a href="<TMPL_VAR BASEURL>about/">about</a></li>
+            <li><a href="<TMPL_VAR BASEURL>recentchanges/">recent changes</a></li>
+          </ul>
         </div>
-        <div id="floatmenu">
-            <div class="menuitem">Welcome</div>
-            <div class="menusubitem"><a href="<TMPL_VAR BASEURL>">Start page</a></div>
-            <div class="menusubitem"><a href="<TMPL_VAR BASEURL>about">About</a></div>
-            <div class="menuitem">Projects</div>
-            <div class="menusubitem"><a href="<TMPL_VAR BASEURL>projects/debimg/">debimg</a></div>
-            <div class="menusubitem"><a href="<TMPL_VAR BASEURL>projects/dir2ogg/">dir2ogg</a></div>
-            <div class="menusubitem"><a href="<TMPL_VAR BASEURL>projects/hardlink/">hardlink</a></div>
-            <div class="menusubitem"><a href="<TMPL_VAR BASEURL>projects/ndisgtk/">ndisgtk</a></div>
-        </div>
-        <div id="maincontent">
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+
             <TMPL_VAR CONTENT>
-        </div>
-        <div id="footer">
-            <div id="pageinfo">
-                Copyright &copy; 2007-2009 Julian Andres Klode - Powered by <a href="http://ikiwiki.info/">ikiwiki</a> - Last edited <TMPL_VAR NAME=MTIME><br />
-                <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/de/"><img alt="Creative Commons License" style="border-width: 0pt;" src="<TMPL_VAR BASEURL>cc-by-sa-3.0-de-88x31.png" /></a>
-                    <br />
-                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/de/">Creative Commons Attribution-Share Alike 3.0 Germany License</a>, except
-                for the template, which is licensed under the GNU GPL 2.
-            </div>
-        </div>
-    </body>
+      </div>
+
+      <footer>
+        <p>
+                Copyright © 2007-2011 Julian Andres Klode - Creative Commons 3.0 BY-SA licensed<br/>
+
+                Powered by <a href="http://ikiwiki.info/">ikiwiki</a> -
+
+                <a href="http://validator.w3.org/check?uri=referer">Valid (X)HTML 5</a>
+            </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
 </html>
