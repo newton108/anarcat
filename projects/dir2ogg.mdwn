@@ -59,12 +59,15 @@ $ <b>dir2ogg foo.mp3 bar.m4a baz.wma qux.wav</b> # <em>multiple files...</em>
 </pre>
 
 ## Converting directories
+
 <pre>$ <b>dir2ogg -d /path/to/mp3directory</b> # <em>single directory...</em>
-<pre>$ <b>dir2ogg /path/to/mp3directory</b> # <em>single directory..., same as previous one.</em>
+$ <b>dir2ogg /path/to/mp3directory</b> # <em>single directory..., same as previous one.</em>
 $ <b>dir2ogg -r /path/to/mp3directory</b> # <em>single directory (and subdirs)...</em>
 $ <b>dir2ogg -d /path/1/ /path/2 /path/3</b> # <em>multiple directories...</em>
 $ <b>dir2ogg -r /path/1/ /path/2 /path/3</b> # <em>recursive...</em></pre>
+
 ## Converting Audio CDs
+
 <pre>$ <b>dir2ogg -c</b> # <em>convert cd in /dev/cdrom</em>
 $ <b>dir2ogg -c /dev/cdrom1</b> # <em>convert cd in /dev/cdrom1</em></pre>
 
