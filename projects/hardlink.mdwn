@@ -1,4 +1,4 @@
-# hardlink - replace file copies using hardlinks
+[[!meta title="hardlink - replace file copies using hardlinks"]]
 
 [[!table format=dsv data="""
 Status|License|Language|VCS|Downloads

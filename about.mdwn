@@ -1,4 +1,4 @@
-# About JAK LINUX
+[[!meta title="About"]]
 Initially, JAK LINUX should be a distribution based on Debian GNU/Linux 4.0, but
 no release happened. I moved my focus from building custom Debian disks to building
 Debian packages, becoming a Debian Developer, developing software and other stuff.

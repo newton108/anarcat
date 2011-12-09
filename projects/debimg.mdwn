@@ -1,8 +1,5 @@
 [[!meta title="debimg - Alternative debian-cd in Python"]]
 
-
-debimg - a debian image generation tool
-=========================================
 debimg is a software designed to replace debian-cd. It is written in Python
 and released under the terms of the GNU General Public License, version 3 or
 (at your option) any later version.

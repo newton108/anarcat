@@ -1,4 +1,4 @@
-#Index of /projects/dir2ogg/0.11
+[[!meta title="Index of /projects/dir2ogg/0.11"]]
 * [Parent](../)
 * [[dir2ogg-0.11.tar.gz]]
 * [[dir2ogg-0.11.1.tar.gz]]

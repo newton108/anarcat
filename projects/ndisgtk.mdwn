@@ -1,6 +1,4 @@
-ndisgtk
-===============================
-This is ndisgtk, a graphical frontend for ndiswrapper.
+[[!meta title="ndisgtk - graphical frontend for ndiswrapper"]]
 
 [[!table format=dsv data="""
 Status|License|Language|Launchpad|VCS|Latest release

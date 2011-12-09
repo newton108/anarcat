@@ -1,4 +1,4 @@
-# dir2ogg - audio conversion tool
+[[!meta title="dir2ogg - audio conversion tool"]]
 dir2ogg is a GPL'ed python script which converts mp3, m4a, wma, and wav files into ogg-vorbis format. It was inspired by
 the perl script [mp32ogg](http://faceprint.com/code/)
 

@@ -1,4 +1,4 @@
-# Welcome to JAK LINUX
+[[!meta title="Welcome"]]
 
 Hello, I'm Julian Andres Klode and this is my website. I am a Debian
 Developer and Ubuntu Member. [[Read_more...|about]]
