@@ -348,7 +348,7 @@ bootmenu:
 - projects/ndisgtk
 # Secondary menu
 bootmenu2:
-- about
+- About
 - RecentChanges
 
 # camelcase plugin
