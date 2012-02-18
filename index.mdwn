@@ -4,6 +4,11 @@ Hello, I'm Julian Andres Klode and this is my website. I am a Debian
 Developer and Ubuntu Member. [[Read_more...|about]]
 
 # News
+
+See [[RecentChanges]] for updates to this website, including an RSS and
+Atom feed. The following table gives an overview about the most important
+changes on this site:
+
 [[!table format=dsv data="""
 Date|Event|Details
 2011-12-09|New design|The website has a new design, based on bootstrap
