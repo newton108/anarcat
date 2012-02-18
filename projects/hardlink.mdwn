@@ -8,21 +8,23 @@ Stable|MIT|Python|[Git@Debian.org](http://git.debian.org/?p=users/jak/hardlink.g
 
 hardlink is a tool which replaces multiple copies of a file with hardlinks.
 Inspiration came from <http://code.google.com/p/hardlinkpy/>, but no code has
-been used.
+been used. It was rewritten from scratch because hardlinkpy code was not very
+readable and written against old Python versions. The program requires Python
+2.5 or newer, and should work with Python 3 after running 2to3 on it.
 
-I started from scratch because hardlinkpy lacks a consistent style and does
-not conform to PEP 8. Furthermore, it supports Python 1.5, which means no
-new functionality is used.
+<div class="well">
 
-My program requires at least Python 2.5, passes all known python checking
-tools (pylint,pychecker,pyflakes) without errors/warnings/information, and is
-compatible with Python 3.0 (after using 2to3).
+<b>Note:</b> Fedora provides a different software under the hardlink name,
+written in C. Before complaining here about a bug in a hardlink package installed
+from your distribution, first check that it is indeed this program, and not
+the one provided by Fedora.
+
+</div>
 
 Downloads
 ------------
 * [[hardlink_0.1.1.tar.gz]] - The tarball
-* [[hardlink_0.1.1_all.deb]] - official Debian package (requires Debian Lenny|Ubuntu Feisty)
-* [hardlink 0.1.1~bpo40+1 all.deb](hardlink_0.1.1~bpo40+1_all.deb) - unofficial Debian package (requires Debian 4.0)
+* [[hardlink_0.1.1_all.deb]] - official Debian package
 
 The tarball can be regenerated at any time by running "pristine-tar checkout
 hardlink_0.1.1.tar.gz" from inside a clone of the git repository.
@@ -31,10 +33,10 @@ Installation
 ------------
 To install hardlink into /usr, run make install.
 
- * DESTDIR - May be set to another root system (useful for packaging)
- * PREFIX  - Normally usr, may be changed to usr/local
- * MANDIR  - Normally $(PREFIX)/share/man (some systems may use $(PREFIX)/man)
- * BINDIR  - Normally $(PREFIX)/bin
+ * <code>DESTDIR</code> - May be set to another root system (useful for packaging)
+ * <code>PREFIX</code>  - Normally <code>usr</code>, may be changed to <code>usr/local</code>
+ * <code>MANDIR</code> - Normally <code>$(PREFIX)/share/man</code> (some systems may use <code>$(PREFIX)/man</code>)
+ * <code>BINDIR</code>  - Normally <code>$(PREFIX)/bin</code>
 
 Differences to hardlinkpy
 -------------------------
