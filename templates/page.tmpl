@@ -28,14 +28,19 @@
         <div class="container">
           <a class="brand" href="<TMPL_VAR BASEURL>">JAK LINUX</a>
           <ul class="nav">
-            <li><a href="<TMPL_VAR BASEURL>projects/debimg/">debimg</a></li>
-            <li><a href="<TMPL_VAR BASEURL>projects/dir2ogg/">dir2ogg</a></li>
-            <li><a href="<TMPL_VAR BASEURL>projects/hardlink/">hardlink</a></li>
-            <li><a href="<TMPL_VAR BASEURL>projects/ndisgtk/">ndisgtk</a></li>
+            <TMPL_LOOP BOOTMENU>
+                <TMPL_IF FIRSTNAV>
+                    <li <TMPL_IF ACTIVE>class="active"</TMPL_IF>><a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a></li>
+                </TMPL_IF>
+            </TMPL_LOOP>
           </ul>
           <ul class="secondary-nav">
-            <li><a href="<TMPL_VAR BASEURL>about/">about</a></li>
-            <li><a href="<TMPL_VAR BASEURL>recentchanges/">recent changes</a></li>
+            <TMPL_LOOP BOOTMENU>
+                <TMPL_IF FIRSTNAV>
+                <TMPL_ELSE>
+                    <li <TMPL_IF ACTIVE>class="active"</TMPL_IF>><a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a></li>
+                </TMPL_IF>
+            </TMPL_LOOP>
           </ul>
         </div>
       </div>
