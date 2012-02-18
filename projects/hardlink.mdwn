@@ -1,8 +1,8 @@
 [[!meta title="hardlink - replace file copies using hardlinks"]]
 
 [[!table format=dsv data="""
-Status|License|Language|VCS|Downloads
-Stable|MIT|Python|[Git@Debian.org](http://git.debian.org/?p=users/jak/hardlink.git;a=summary)|0.1.1 ([tarball](hardlink_0.1.1.tar.gz),[debian package](hardlink_0.1.1_all.deb))
+Status|License|Language|Bug tracking|VCS|Latest release
+Stable|MIT|Python|[email](mailto:jak@jak-linux.org)|[Git@Debian.org](http://git.debian.org/?p=users/jak/hardlink.git;a=summary)|[[hardlink_0.1.1.tar.gz]] (Feb 2009)
 """]]
 
 
