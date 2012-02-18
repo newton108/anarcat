@@ -1,35 +1,30 @@
 [[!meta title="About"]]
-Initially, JAK LINUX should be a distribution based on Debian GNU/Linux 4.0, but
-no release happened. I moved my focus from building custom Debian disks to building
-Debian packages, becoming a Debian Developer, developing software and other stuff.
 
-This does not mean that the project has been canceled completely. There are plans
-to create a JAK LINUX 1.0 in September 2008, based on Debian Lenny and suited at
-Office Workstations and Home Desktops.
+My name is Julian Andres Klode, I'm a Debian Developer and Ubuntu Member,
+amongst other things. I maintain various software taken over from others,
+such as dir2ogg and ndisgtk;
+participate in the development of Debian-related software such as
+APT and its Python bindings;
+and develop some other software myself, such as hardlink.
 
-# About me
-My name is Julian Andres Klode, I'm a Debian Developer and Ubuntu Member.
+You can contact me via one of the following options:
 
-I'm also the primary developer of dir2ogg and ndisgtk, which I took over from
-their previous authors. I'm also involved in the development of gnome-app-install,
-primarily due to my role as its Debian Maintainer.
+ * Send an email to [jak@jak-linux.org](mailto:jak@jak-linux.org)
+ * Send a Jabber message to [juliank@jabber.org](xmpp:juliank@jabber.org)
+ * Contact me via IRC, nickname *juliank* on networks FreeNode, OFTC, GimpNet.
 
-You can contact me via:
+You can also read my blog at <http://juliank.wordpress.com/> and add me to
+your circles on [Google+](https://plus.google.com/100306574310962400498).
 
- * jabber at juliank@jabber.org
- * e-mail at jak@jak-linux.org
- * IRC, nickname juliank on networks FreeNode, OFTC, GimpNet.
+## Site History
+Initially, JAK LINUX was supposed to be a Linux distribution based on
+Debian GNU/Linux 4.0, shipping standard Debian packages plus some packages
+from a custom repository. This plan never really took of, and the site has
+since become a place where my projects are hosted.
 
-You can also read my blog at <http://juliank.wordpress.com/>
-
-# About this site
-The JAK LINUX is powered by [ikiwiki](http://ikiwiki.info), a free wiki compiler.
-
-The design used here is based on the design from <http://mentors.debian.net>, adjusted to ikiwiki's template
-system. The full design will be released under the GPL in the next weeks.
-
-Most of ikiwiki's functionality is not used, because jak-linux.org's hoster has no support for dynamic
-websites and provides no ssh access. I'm currently looking for (v)servers running Debian with root
-access via ssh, located in Germany. If possible, the server should be free. 
-
-The hoster will be linked to on the JAK LINUX homepage and in the footer of all pages.
+## Site Technology
+The JAK LINUX is powered by [ikiwiki](http://ikiwiki.info), a free wiki
+compiler. Only a static export of the website is available, because there
+is no support for dynamic content on the server this site is hosted.
+The design is based on [Bootstrap](http://twitter.github.com/bootstrap/), from
+Twitter, in version 2.0, and licensed under the Apache License, version 2.
