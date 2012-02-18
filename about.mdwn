@@ -28,3 +28,4 @@ compiler. Only a static export of the website is available, because there
 is no support for dynamic content on the server this site is hosted.
 The design is based on [Bootstrap](http://twitter.github.com/bootstrap/), from
 Twitter, in version 2.0, and licensed under the Apache License, version 2.
+The source code for the website is available at <http://anonscm.debian.org/gitweb/?p=users/jak/website.git;a=summary>.
