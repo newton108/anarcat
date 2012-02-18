@@ -1,16 +1,21 @@
 [[!meta title="debimg - Alternative debian-cd in Python"]]
 
+[[!table format=dsv data="""
+Status|License|Language|SCM|Latest release
+Historic|GPL-3+|Python (2.5)|[Git](http://git.debian.org/?p=debimg/debimg.git)|N/A
+"""]]
+
+<div class="alert alert-error">
+    debimg is not in active use or development. This page is provided for
+    historical purposes only.
+</div>
+
 debimg is a software designed to replace debian-cd. It is written in Python
 and released under the terms of the GNU General Public License, version 3 or
 (at your option) any later version.
 
-[[!table format=dsv data="""
-Status|License|Language|SCM|Latest release
-Alpha|GPL-3+|Python (2.5)|[Git](http://git.debian.org/?p=debimg/debimg.git)|NONE
-"""]]
 
-Why debimg?
-===========
+## Why debimg?
 debimg provides a flexible, fast, and easy way to generate Debian images. The
 facilities provided by debimg core, the basic package of debimg, enable
 developers to easily write applications for creating Debian images.
@@ -33,8 +38,7 @@ Python package which allows developers to write applications for creating Debian
 images. Together with debimg core, I also announced the plan to create a new
 debimg based on debimg core and using a YAML configuration format.
 
-Features
-========
+## Features
 The following list outlines the features which are expected to be shipped in the
 feature-complete release. Most of the features related to debimg core are already
 available, though.
@@ -68,8 +72,7 @@ available, though.
 </dl>
 
 
-More information
-=================
+## More information
 <dl>
     <dt>Blog</dt>
     <dd><p>
