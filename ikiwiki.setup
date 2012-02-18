@@ -38,6 +38,7 @@ add_plugins:
 - prettydate
 - shortcut
 - table
+- map
 # plugins to disable
 disable_plugins:
 - openid
