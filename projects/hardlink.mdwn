@@ -3,7 +3,7 @@
 [[!table format=dsv data="""
 Status|License|Language|Bug tracking|VCS|Latest release
 Stable|MIT|Python|[email](mailto:jak@jak-linux.org)|[git.debian.org](http://anonscm.debian.org/gitweb/?p=users/jak/hardlink.git;a=summary)|[[hardlink_0.1.2.tar.gz]] (Feb 2012)
-Stable|MIT|C|[email](mailto:jak@jak-linux.org)|[git.debian.org](http://anonscm.debian.org/gitweb/?p=users/jak/hardlink.git;a=summary)|[[hardlink_0.2.0~rc1.tar.gz]] (Mar 2012)
+Experimental|MIT|C|[email](mailto:jak@jak-linux.org)|[git.debian.org](http://anonscm.debian.org/gitweb/?p=users/jak/hardlink.git;a=summary)|[[hardlink_0.2.0~rc1.tar.gz]] (Mar 2012)
 """]]
 
 
