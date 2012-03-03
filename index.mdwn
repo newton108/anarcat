@@ -11,6 +11,8 @@ changes on this site:
 
 [[!table format=dsv data="""
 Date|Event|Details
+2012-03-03|[[projects/hardlink]] [[0.2.0 RC1|projects/hardlink/hardlink_0.2.0~rc1.tar.gz]]|Rewrite in C
+2012-02-28|[[projects/hardlink]] [[0.1.2|projects/hardlink/hardlink_0.1.2.tar.gz]]|Fix some bugs
 2011-12-09|New design|The website has a new design, based on bootstrap
 2010-01-28|[[projects/ndisgtk]] [[0.8.5|projects/ndisgtk/ndisgtk-0.8.5.tar.gz]]|NetworkManager 0.7 support, and more bugfixes
 2009-08-04|[[projects/dir2ogg]] [[0.11.8|projects/dir2ogg/0.11/dir2ogg-0.11.8.tar.gz]]|8th update to 0.11, fixes some bugs and introduces new formats.
