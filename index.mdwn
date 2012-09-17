@@ -11,6 +11,7 @@ changes on this site:
 
 [[!table format=dsv data="""
 Date|Event|Details
+2012-09-17|[[projects/hardlink]] [[0.3.0 RC1|projects/hardlink/hardlink_0.3.0~rc1.tar.gz]]|Larger bug fixes
 2012-08-17|GPG signatures|All tarballs now have GPG signatures
 2012-03-03|[[projects/hardlink]] [[0.2.0|projects/hardlink/hardlink_0.2.0.tar.gz]]|Final release
 2012-03-03|[[projects/hardlink]] [[0.2.0 RC1|projects/hardlink/hardlink_0.2.0~rc1.tar.gz]]|Rewrite in C
