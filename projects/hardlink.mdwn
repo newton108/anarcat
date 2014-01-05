@@ -25,13 +25,9 @@ the one provided by Fedora.
 
 Downloads
 ------------
-* [[hardlink_0.3.0~rc1.tar.gz]] - The tarball of the experimental release
-* [[hardlink_0.2.0.tar.gz]] - The tarball of the stable release
-* [[hardlink_0.1.2.tar.gz]] - The tarball of the deprecated Python release
-
-The tarball can be regenerated at any time by running "pristine-tar checkout
-hardlink_0.1.2.tar.gz" from inside a clone of the git repository.
-
+See in the table above for the current releases. Older releases are available as
+well (just change the version number as needed in another link), but there are
+no links here.
 
 Installation
 ------------
