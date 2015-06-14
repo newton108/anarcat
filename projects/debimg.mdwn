@@ -5,7 +5,7 @@ Status|License|Language|SCM|Latest release
 Historic|GPL-3+|Python (2.5)|[Git](http://git.debian.org/?p=debimg/debimg.git)|N/A
 """]]
 
-<div class="alert alert-error">
+<div class="alert alert-warning">
     debimg is not in active use or development. This page is provided for
     historical purposes only.
 </div>
