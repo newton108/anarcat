@@ -43,6 +43,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
+            <TMPL_IF SIDEBAR>
+            <TMPL_VAR SIDEBAR>
+            </TMPL_IF>
             <TMPL_LOOP BOOTMENU>
                 <TMPL_IF FIRSTNAV>
                     <li <TMPL_IF ACTIVE>class="active"</TMPL_IF>><a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a></li>
