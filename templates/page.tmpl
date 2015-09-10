@@ -5,10 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <TMPL_IF NAME="META"><TMPL_VAR META></TMPL_IF>
+    <TMPL_IF DYNAMIC>
+    <TMPL_IF FORCEBASEURL><base href="<TMPL_VAR FORCEBASEURL>" /><TMPL_ELSE>
+    <TMPL_IF BASEURL><base href="<TMPL_VAR BASEURL>" /></TMPL_IF>
+    </TMPL_IF>
+    </TMPL_IF>
 
     <title><TMPL_LOOP NAME="PARENTLINKS"><TMPL_VAR NAME=PAGE>/</TMPL_LOOP><TMPL_VAR TITLE></title>
 
-    <TMPL_IF NAME="META"><TMPL_VAR META></TMPL_IF>
+    <link rel="icon" href="<TMPL_VAR BASEURL><TMPL_VAR FAVICON>" type="image/x-icon" />
 
     <!-- ikiwiki CSS -->
     <link href="<TMPL_VAR BASEURL>style.css" rel="stylesheet" />
@@ -20,13 +26,34 @@
     <link href="<TMPL_VAR BASEURL>jak.css" rel="stylesheet" />
 
     <!-- Custom styles for derivatives -->
-    <link href="<TMPL_VAR BASEURL>local.css" rel="stylesheet" />
+    <TMPL_IF LOCAL_CSS>
+    <link rel="stylesheet" href="<TMPL_VAR BASEURL><TMPL_VAR LOCAL_CSS>" type="text/css" />
+    <TMPL_ELSE>
+    <link rel="stylesheet" href="<TMPL_VAR BASEURL>local.css" type="text/css" />
+    </TMPL_IF>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <TMPL_UNLESS DYNAMIC>
+      <TMPL_IF EDITURL>
+        <link rel="alternate" type="application/x-wiki" title="Edit this page" href="<TMPL_VAR EDITURL>" />
+      </TMPL_IF>
+      <TMPL_IF FEEDLINKS><TMPL_VAR FEEDLINKS></TMPL_IF>
+      <TMPL_IF RELVCS><TMPL_VAR RELVCS></TMPL_IF>
+      <TMPL_IF META><TMPL_VAR META></TMPL_IF>
+      <TMPL_LOOP TRAILLOOP>
+        <TMPL_IF PREVPAGE>
+          <link rel="prev" href="<TMPL_VAR PREVURL>" title="<TMPL_VAR PREVTITLE>" />
+        </TMPL_IF>
+        <link rel="up" href="<TMPL_VAR TRAILURL>" title="<TMPL_VAR TRAILTITLE>" />
+        <TMPL_IF NEXTPAGE>
+          <link rel="next" href="<TMPL_VAR NEXTURL>" title="<TMPL_VAR NEXTTITLE>" />
+        </TMPL_IF>
+      </TMPL_LOOP>
+    </TMPL_UNLESS>
   </head>
   <body>
 
@@ -101,6 +128,34 @@
           </header>
 
             <TMPL_VAR CONTENT>
+            <TMPL_VAR TRAILS>
+
+            <TMPL_IF TAGS>
+            <TMPL_IF HTML5><nav class="tags"><TMPL_ELSE><div class="tags"></TMPL_IF>
+            Tags:
+            <TMPL_LOOP TAGS>
+            <TMPL_VAR LINK>
+            </TMPL_LOOP>
+            <TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
+            </TMPL_IF>
+
+            <TMPL_IF BACKLINKS>
+            <TMPL_IF HTML5><nav id="backlinks"><TMPL_ELSE><div id="backlinks"></TMPL_IF>
+            Links:
+            <TMPL_LOOP BACKLINKS>
+            <a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>
+            </TMPL_LOOP>
+            <TMPL_IF MORE_BACKLINKS>
+            <span class="popup">...
+            <span class="balloon">
+            <TMPL_LOOP MORE_BACKLINKS>
+            <a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>
+            </TMPL_LOOP>
+            </span>
+            </span>
+            </TMPL_IF>
+            <TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
+            </TMPL_IF>
 
             <TMPL_IF ENCLOSURE>
             <TMPL_IF HTML5><section id="enclosure"><TMPL_ELSE><div id="enclosure"></TMPL_IF>
