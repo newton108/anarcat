@@ -56,10 +56,6 @@ code {
 a.navbar-brand {
     padding: 0;
 }
-/* ... but only the logo - if no favicon, restore padding */
-a.navbar-brand:last-child  {
-    padding: 15px;
-}
 
 /* limit main content to ~90 chars per line */
 #content {

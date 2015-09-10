@@ -14,9 +14,7 @@
 
     <title><TMPL_LOOP NAME="PARENTLINKS"><TMPL_VAR NAME=PAGE>/</TMPL_LOOP><TMPL_VAR TITLE></title>
 
-    <TMPL_IF FAVICON>
-      <link rel="icon" href="<TMPL_VAR BASEURL><TMPL_VAR FAVICON>" type="image/x-icon" />
-    </TMPL_IF>
+    <link rel="icon" href="<TMPL_VAR BASEURL>favicon.png" type="image/x-icon" />
 
     <!-- ikiwiki CSS -->
     <link href="<TMPL_VAR BASEURL>style.css" rel="stylesheet" />
@@ -69,11 +67,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="<TMPL_VAR BASEURL>">
-            <TMPL_IF FAVICON>
-              <img alt="<TMPL_VAR WIKINAME>" src="<TMPL_VAR BASEURL><TMPL_VAR FAVICON>" width="50" heigth="50" />
-              <TMPL_ELSE>
-                <TMPL_VAR WIKINAME>
-            </TMPL_IF>
+            <img alt="<TMPL_VAR WIKINAME>" src="<TMPL_VAR BASEURL>favicon.png" width="50" heigth="50" />
           </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
