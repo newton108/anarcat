@@ -102,6 +102,27 @@
 
             <TMPL_VAR CONTENT>
 
+            <TMPL_IF ENCLOSURE>
+            <TMPL_IF HTML5><section id="enclosure"><TMPL_ELSE><div id="enclosure"></TMPL_IF>
+            <a href="<TMPL_VAR ENCLOSURE>">Download</a>
+            <TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
+            </TMPL_IF>
+
+            <TMPL_UNLESS DYNAMIC>
+            <TMPL_IF COMMENTS>
+            <TMPL_IF HTML5><section id="comments"><TMPL_ELSE><div id="comments"></TMPL_IF>
+            <TMPL_VAR COMMENTS>
+            <TMPL_IF ADDCOMMENTURL>
+            <div class="addcomment">
+            <a href="<TMPL_VAR ADDCOMMENTURL>">Add a comment</a>
+            </div>
+            <TMPL_ELSE>
+            <div class="addcomment">Comments on this page are closed.</div>
+            </TMPL_IF>
+            <TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
+            </TMPL_IF>
+            </TMPL_UNLESS>
+
     </div> <!-- /container -->
 
     <footer class="footer">
