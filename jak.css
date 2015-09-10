@@ -38,4 +38,16 @@ code {
   font-size: 80%;
 }
 
-
+/* comments fixup */
+.comment {
+    border: none;
+    padding: 1em;
+    margin: 1em;
+    background: #f3f3f3;
+}
+.actions ul {
+    margin: inherit;
+    padding: inherit;
+    height: inherit;
+    /* list-style-type: none; */
+}
