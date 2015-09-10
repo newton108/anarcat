@@ -137,33 +137,6 @@
 
             <TMPL_VAR CONTENT>
 
-            <TMPL_IF TAGS>
-            <TMPL_IF HTML5><nav class="tags"><TMPL_ELSE><div class="tags"></TMPL_IF>
-            Tags:
-            <TMPL_LOOP TAGS>
-            <TMPL_VAR LINK>
-            </TMPL_LOOP>
-            <TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
-            </TMPL_IF>
-
-            <TMPL_IF BACKLINKS>
-            <TMPL_IF HTML5><nav id="backlinks"><TMPL_ELSE><div id="backlinks"></TMPL_IF>
-            Links:
-            <TMPL_LOOP BACKLINKS>
-            <a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>
-            </TMPL_LOOP>
-            <TMPL_IF MORE_BACKLINKS>
-            <span class="popup">...
-            <span class="balloon">
-            <TMPL_LOOP MORE_BACKLINKS>
-            <a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>
-            </TMPL_LOOP>
-            </span>
-            </span>
-            </TMPL_IF>
-            <TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
-            </TMPL_IF>
-
             <TMPL_IF ENCLOSURE>
             <TMPL_IF HTML5><section id="enclosure"><TMPL_ELSE><div id="enclosure"></TMPL_IF>
             <a href="<TMPL_VAR ENCLOSURE>">Download</a>
@@ -188,12 +161,51 @@
                 <TMPL_ELSE>
                   <div class="navbar">
             </TMPL_IF>
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
             <TMPL_IF TRAILS>
               <TMPL_VAR TRAILS>
             </TMPL_IF>
             <TMPL_IF SEARCHFORM>
               <TMPL_VAR SEARCHFORM>
             </TMPL_IF>
+
+            <ul class="nav navbar-right">
+            <TMPL_IF TAGS>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tags <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <TMPL_LOOP TAGS>
+                    <li><TMPL_VAR LINK></li>
+                  </TMPL_LOOP>
+                </ul>
+              </li>
+            </TMPL_IF>
+
+            <TMPL_IF BACKLINKS>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Links<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <TMPL_LOOP BACKLINKS>
+                    <li><a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a></li>
+                  </TMPL_LOOP>
+                  <TMPL_IF MORE_BACKLINKS>
+                    <TMPL_LOOP MORE_BACKLINKS>
+                      <li><a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a></li>
+                    </TMPL_LOOP>
+                  </TMPL_IF>
+                </ul>
+              </li>
+            </TMPL_IF>
+            </ul>
+            
             <TMPL_IF HTML5></nav>
             <TMPL_ELSE>
             </div>
