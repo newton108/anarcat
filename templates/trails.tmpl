@@ -7,18 +7,25 @@
   </TMPL_IF>
   <ul class="nav navbar-nav trail">
     <TMPL_IF PREVPAGE>
-      <li class="trailprev">
-        <span class="trailarrow">←</span>
-        <a href="<TMPL_VAR PREVURL>"><TMPL_VAR PREVTITLE></a>
+      <li>
+        <button type="button" class="btn btn-default" aria-label="Left Align">
+          <span class="glyphicon glyphicon-menu-left"></span>
+          <a href="<TMPL_VAR PREVURL>"><TMPL_VAR PREVTITLE></a>
+        </button>
       </li>
     </TMPL_IF>
-    <li class="trailup">
-      <a href="<TMPL_VAR TRAILURL>"><TMPL_VAR TRAILTITLE></a>
+    <li>
+      <button type="button" class="btn btn-default" aria-label="Right Align">
+          <span class="glyphicon glyphicon-menu-up"></span>
+        <a href="<TMPL_VAR TRAILURL>"><TMPL_VAR TRAILTITLE></a>
+      </button>
     </li>
     <TMPL_IF NEXTPAGE>
-      <li class="trailnext">
-        <a href="<TMPL_VAR NEXTURL>"><TMPL_VAR NEXTTITLE></a>
-        <span class="trailarrow">→</span>
+      <li>
+        <button type="button" class="btn btn-default" aria-label="Right Align">
+          <a href="<TMPL_VAR NEXTURL>"><TMPL_VAR NEXTTITLE></a>
+          <span class="glyphicon glyphicon-menu-right"></span>
+        </button>
       </li>
     </TMPL_IF>
   </ul>
