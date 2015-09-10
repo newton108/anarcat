@@ -185,7 +185,20 @@
             </TMPL_IF>
             </TMPL_UNLESS>
 
-            <TMPL_VAR TRAILS>
+            <TMPL_IF HTML5><nav class="navbar trails">
+                <TMPL_ELSE>
+                  <div class="navbar trails">
+            </TMPL_IF>
+            <TMPL_IF TRAILS>
+              <TMPL_VAR TRAILS>
+            </TMPL_IF>
+            <TMPL_IF SEARCHFORM>
+              <TMPL_VAR SEARCHFORM>
+            </TMPL_IF>
+            <TMPL_IF HTML5></nav>
+            <TMPL_ELSE>
+            </div>
+            </TMPL_IF>
     </div> <!-- /container -->
 
     <footer class="footer">
@@ -201,9 +214,6 @@
             <a href="http://validator.w3.org/check?uri=referer">Valid (X)HTML 5</a>.
           </span>
         </p>
-        <TMPL_IF SEARCHFORM>
-          <TMPL_VAR SEARCHFORM>
-        </TMPL_IF>
       </div>
     </footer>
 
