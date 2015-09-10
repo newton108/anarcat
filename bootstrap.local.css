@@ -61,3 +61,10 @@ a.navbar-brand {
 #content {
   max-width: 45em;
 }
+
+/* try Fira Font */
+body {
+    font-family: "Fira Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /* font-weight: 300; */ /* this would be a little more like the
+    weight of "sans-serif" here, but is too light. */
+}
