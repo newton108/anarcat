@@ -60,3 +60,8 @@ a.navbar-brand {
 a.navbar-brand:last-child  {
     padding: 15px;
 }
+
+/* limit main content to ~90 chars per line */
+#content {
+  max-width: 600px;
+}
