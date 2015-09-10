@@ -63,5 +63,5 @@ a.navbar-brand:last-child  {
 
 /* limit main content to ~90 chars per line */
 #content {
-  max-width: 600px;
+  max-width: 45em;
 }
