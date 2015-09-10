@@ -1,11 +1,7 @@
 <TMPL_LOOP TRAILLOOP>
   <TMPL_IF __FIRST__>
-    <TMPL_IF HTML5><nav class="navbar trails">
-        <TMPL_ELSE>
-          <div class="navbar trails">
-    </TMPL_IF>
+    <ul class="nav navbar-nav trail">
   </TMPL_IF>
-  <ul class="nav navbar-nav trail">
     <TMPL_IF PREVPAGE>
       <li>
         <button type="button" class="btn btn-default" aria-label="Left Align">
@@ -28,12 +24,7 @@
         </button>
       </li>
     </TMPL_IF>
-  </ul>
   <TMPL_IF __LAST__>
-    <TMPL_IF HTML5>
-  </nav>
-  <TMPL_ELSE>
-  </div>
-  </TMPL_IF>
+  </ul>
   </TMPL_IF>
 </TMPL_LOOP>
