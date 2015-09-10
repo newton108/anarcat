@@ -161,6 +161,8 @@
                 <TMPL_ELSE>
                   <div class="navbar">
             </TMPL_IF>
+            <div class="container-fluid">
+
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -170,6 +172,7 @@
               </button>
             </div>
 
+            <div class="collapse navbar-collapse">
             <TMPL_IF TRAILS>
               <TMPL_VAR TRAILS>
             </TMPL_IF>
@@ -205,7 +208,8 @@
               </li>
             </TMPL_IF>
             </ul>
-            
+            </div>
+            </div>
             <TMPL_IF HTML5></nav>
             <TMPL_ELSE>
             </div>
