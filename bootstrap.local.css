@@ -68,3 +68,9 @@ body {
     /* font-weight: 300; */ /* this would be a little more like the
     weight of "sans-serif" here, but is too light. */
 }
+
+/* don't word-wrap PRE blocks so they are scrolled*/
+pre {
+    -ms-word-wrap: normal;
+    word-wrap: normal;
+}
