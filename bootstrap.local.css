@@ -74,3 +74,6 @@ pre {
     -ms-word-wrap: normal;
     word-wrap: normal;
 }
+pre code {
+      white-space: pre;
+}
