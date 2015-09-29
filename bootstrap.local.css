@@ -80,3 +80,7 @@ pre {
 pre code {
       white-space: pre;
 }
+/* no idea why bootstrap makes quotes bigger, not what i want */
+blockquote {
+    font-size: 14px;
+}
