@@ -57,6 +57,15 @@ a.navbar-brand {
     padding: 0;
 }
 
+/* limit size of pager buttons so they fit in a line */
+.pager button {
+    max-width: 200px;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
 /* limit main content to ~90 chars per line */
 #content {
   max-width: 45em;

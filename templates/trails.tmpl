@@ -1,6 +1,7 @@
 <TMPL_LOOP TRAILLOOP>
   <TMPL_IF __FIRST__>
-    <ul class="nav navbar-nav trail">
+  <nav class="navbar">
+    <ul class="nav navbar-nav pager">
   </TMPL_IF>
     <TMPL_IF PREVPAGE>
       <li>
@@ -26,5 +27,6 @@
     </TMPL_IF>
   <TMPL_IF __LAST__>
   </ul>
+  </nav>
   </TMPL_IF>
 </TMPL_LOOP>
