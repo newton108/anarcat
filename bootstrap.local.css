@@ -105,3 +105,6 @@ blockquote {
 .navbar-fixed-top .in { background-color: #f8f8f8; }
 /* align drop-down menus to the right */
 .navbar-right { text-align: right; }
+/* remove border and add gap around header */
+.navbar-fixed-top #navbar, .navbar-fixed-top .navbar-header { margin: 10px; }
+.navbar-default { border: none; }
