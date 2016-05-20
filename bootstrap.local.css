@@ -52,11 +52,6 @@ code {
     /* list-style-type: none; */
 }
 
-/* remove borders around logo */
-a.navbar-brand {
-    padding: 0;
-}
-
 /* limit size of pager buttons so they fit in a line */
 .pager button {
     max-width: 200px;
@@ -105,6 +100,5 @@ blockquote {
 .navbar-fixed-top .in { background-color: #f8f8f8; }
 /* align drop-down menus to the right */
 .navbar-right { text-align: right; }
-/* remove border and add gap around header */
-.navbar-fixed-top #navbar, .navbar-fixed-top .navbar-header { margin: 10px; }
+/* remove border */
 .navbar-default { border: none; }
