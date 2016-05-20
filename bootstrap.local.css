@@ -101,4 +101,5 @@ blockquote {
 
 /* transparent on top because links disappear behind otherwise */
 .navbar-fixed-top { background: none; }
-.navbar-fixed-top .nav { background-color: #f8f8f8; }
+/* .in gets added by bootstrap on pop-up */
+.navbar-fixed-top .in { background-color: #f8f8f8; }

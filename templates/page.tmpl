@@ -89,10 +89,10 @@
                 <li><a href="<TMPL_VAR EDITURL>" rel="nofollow">Edit</a></li>
               </TMPL_IF>
               <TMPL_IF RECENTCHANGESURL>
-                <li class="hidden-xs hidden-sm"><a href="<TMPL_VAR RECENTCHANGESURL>">Timeline</a></li>
+                <li class="hidden-xs"><a href="<TMPL_VAR RECENTCHANGESURL>">Timeline</a></li>
               </TMPL_IF>
               <TMPL_IF HISTORYURL>
-                <li class="hidden-xs hidden-sm"><a href="<TMPL_VAR HISTORYURL>">History</a></li>
+                <li class="hidden-xs"><a href="<TMPL_VAR HISTORYURL>">History</a></li>
               </TMPL_IF>
               <TMPL_IF GETSOURCEURL>
                 <li class="hidden-xs hidden-sm"><a href="<TMPL_VAR GETSOURCEURL>">Source</a></li>
@@ -102,7 +102,7 @@
               </TMPL_IF>
               <TMPL_IF ACTIONS>
                 <TMPL_LOOP ACTIONS>
-                  <li class="hidden-xs hidden-sm"><TMPL_VAR ACTION></li>
+                  <li class="hidden-xs"><TMPL_VAR ACTION></li>
                 </TMPL_LOOP>
               </TMPL_IF>
               <TMPL_IF COMMENTSLINK>
