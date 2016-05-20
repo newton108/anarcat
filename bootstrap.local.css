@@ -100,3 +100,9 @@ blockquote {
 .navbar-fixed-top .in { background-color: #f8f8f8; }
 /* align drop-down menus to the right */
 .navbar-right { text-align: right; }
+/* wrap long URLs so that we don't overflow layout
+ * this could apply to any element, but we often have to deal with long
+ * links so limit to that to avoid unexpected damage */
+#content a {
+    word-wrap: break-word;
+}
