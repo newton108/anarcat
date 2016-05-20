@@ -71,6 +71,11 @@ a.navbar-brand {
   max-width: 45em;
 }
 
+/* limit header as well otherwise logo is out of whack without sidebar */
+.navbar-fixed-top .container {
+  max-width: 55em;
+}
+
 /* try Fira Font, fallback on bootstrap fonts */
 body {
     font-family: "Fira Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
