@@ -103,3 +103,5 @@ blockquote {
 .navbar-fixed-top { background: none; }
 /* .in gets added by bootstrap on pop-up */
 .navbar-fixed-top .in { background-color: #f8f8f8; }
+/* align drop-down menus to the right */
+.navbar-right { text-align: right; }
