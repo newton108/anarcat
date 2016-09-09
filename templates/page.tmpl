@@ -128,7 +128,20 @@
 
 
           <header class="page-header">
-            <h1><TMPL_VAR TITLE></h1>
+
+              <span class="parentlinks">
+                <ol class="breadcrumb">
+                  <TMPL_LOOP PARENTLINKS>
+                  <li><a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a></li>
+                  </TMPL_LOOP>
+
+
+                  <li class="active"><TMPL_VAR TITLE></li>
+                </ol>
+              </span>
+            <h1>
+              <TMPL_VAR TITLE>
+            </h1>
           </header>
 
             <TMPL_VAR CONTENT>
