@@ -117,3 +117,9 @@ div.footnotes { font-size: small; }
 .navbar-fixed-top .in { background-color: #f8f8f8; }
 /* align drop-down menus to the right */
 .navbar-right { text-align: right; }
+
+/* remove border of inline pages */
+.inlinepage {
+    border: none;
+    padding: 0px 0px;
+}
