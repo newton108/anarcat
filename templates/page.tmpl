@@ -16,6 +16,57 @@
 
     <!-- <link rel="icon" href="<TMPL_VAR BASEURL>favicon.png" type="image/x-icon" /> -->
 
+
+
+
+    <!-- pandoc.pm math-related additions start -->
+    <TMPL_IF pandoc_math_mathjax>
+    <TMPL_IF pandoc_math_custom_css><link rel="stylesheet" href="<TMPL_VAR pandoc_math_custom_css>"></TMPL_IF>
+    <script type="text/javascript" async src="<TMPL_IF pandoc_math_custom_js><TMPL_VAR pandoc_math_custom_js><TMPL_ELSE>https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML</TMPL_IF>"></script>
+    </TMPL_IF>
+    <TMPL_IF pandoc_math_katex>
+    <link rel="stylesheet" href="<TMPL_IF pandoc_math_custom_css><TMPL_VAR pandoc_math_custom_css><TMPL_ELSE>//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css</TMPL_IF>">
+    <script src="<TMPL_IF pandoc_math_custom_js><TMPL_VAR pandoc_math_custom_js><TMPL_ELSE>//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js</TMPL_IF>"></script>
+    <script type="text/javascript">
+    window.addEventListener("load", function(){var mathElements = document.getElementsByClassName("math");
+      for (var i=0; i < mathElements.length; i++) {
+        var texText = mathElements[i].firstChild;
+        katex.render(texText.data, mathElements[i]);
+      }
+    });
+    </script>
+    </TMPL_IF>
+    <TMPL_IF pandoc_math_jsmath>
+    <!-- jsmath is obsolete, so we emulate it using mathjax -->
+    <TMPL_IF pandoc_math_custom_css><link rel="stylesheet" href="<TMPL_VAR pandoc_math_custom_css>"></TMPL_IF>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({extensions: ["jsMath2jax.js"]});</script>
+    <script src="<TMPL_IF pandoc_math_custom_js><TMPL_VAR pandoc_math_custom_js><TMPL_ELSE>http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML</TMPL_IF>"></script>
+    </TMPL_IF>
+    <TMPL_IF pandoc_math_latexmathml>
+    <TMPL_IF pandoc_math_custom_css><link rel="stylesheet" href="<TMPL_VAR pandoc_math_custom_css>"></TMPL_IF>
+    <script type="text/javascript" src="<TMPL_IF pandoc_math_custom_js><TMPL_VAR pandoc_math_custom_js><TMPL_ELSE>http://math.etsu.edu/LaTeXMathML/LaTeXMathML.js</TMPL_IF>"></script>
+    <link rel="stylesheet" type="text/css" href="<TMPL_IF pandoc_math_custom_css><TMPL_VAR pandoc_math_custom_css><TMPL_ELSE>http://math.etsu.edu/LaTeXMathML/LaTeXMathML.standardarticle.css</TMPL_IF>" />
+    </TMPL_IF>
+    <TMPL_IF pandoc_math_asciimathml>
+    <!-- use mathjax, since the mathml rendering mode of asciimathml has poor browser support --->
+    <TMPL_IF pandoc_math_custom_css><link rel="stylesheet" href="<TMPL_VAR pandoc_math_custom_css>"></TMPL_IF>
+    <script src="<TMPL_IF pandoc_math_custom_js><TMPL_VAR pandoc_math_custom_js><TMPL_ELSE>https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML</TMPL_IF>"></script>
+    </TMPL_IF>
+    <TMPL_IF pandoc_math_mathml>
+    <!--mathml: native for firefox/mozilla - other browsers need custom js -->
+    <TMPL_IF pandoc_math_custom_css><link rel="stylesheet" href="<TMPL_VAR pandoc_math_custom_css>"></TMPL_IF>
+    <TMPL_IF pandoc_math_custom_js><script src="<TMPL_VAR pandoc_math_custom_js>"></script></TMPL_IF>
+    </TMPL_IF>
+    <TMPL_IF pandoc_math_mimetex>
+    <!-- mimetex for math with cgi script at <TMPL_IF pandoc_math_custom_js><TMPL_VAR pandoc_math_custom_js><TMPL_ELSE>/cgi-bin/mimetex.cgi</TMPL_IF> -->
+    <TMPL_IF pandoc_math_custom_css><link rel="stylesheet" href="<TMPL_VAR pandoc_math_custom_css>"></TMPL_IF>
+    </TMPL_IF>
+    <TMPL_IF pandoc_math_webtex>
+    <!-- webtex for math with <TMPL_IF pandoc_math_custom_js><TMPL_VAR pandoc_math_custom_js><TMPL_ELSE>a google charts api fallback URL</TMPL_IF> -->
+    <TMPL_IF pandoc_math_custom_css><link rel="stylesheet" href="<TMPL_VAR pandoc_math_custom_css>"></TMPL_IF>
+    </TMPL_IF>
+    <!-- pandoc.pm math-related additions end -->
+
     <!-- ikiwiki CSS -->
     <link href="<TMPL_VAR BASEURL>style.css" rel="stylesheet" />
 
